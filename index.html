@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="node_modules/fullpage.js/dist/fullpage.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="\node_modules\jquery\dist\jquery.min.js"></script>
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
     <script src="node_modules/fullpage.js/vendors/easings.min.js"></script>
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
@@ -14,7 +17,22 @@
 </head>
 <body>
     <div id="fullpage">
-        <div class="section">Some section</div>
+        <div class="section">
+            <div id="container">
+                <div id="container2">
+                    <div class="box one"></div>
+                    <div class="box two"></div>
+                    <div class="box three"></div>
+                    <div class="box four"></div>
+                </div>
+                <script type="text/javascript">
+                    document.getElementById('container')
+                        .addEventListener('mousewheel', function (e) {
+                            this.scrollTop += e.deltaY;
+                        });
+                </script>
+            </div>
+        </div>
         <div class="section">Some section</div>
         <div class="section">Some section</div>
         <div class="section">Some section</div>
