@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,114 +16,132 @@
     <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.js"></script>
     <title>La curiosité au cœur de la photographie</title>
 </head>
+
 <body>
-    <div id="fullpage">
+
+    <ul id="menu">
+        <li data-menuanchor="firstPage"><a href="#firstPage">mystère</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">désir</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">intérêt</a></li>
+        <li data-menuanchor="4thPage"><a href="#4thPage">passion</a></li>
+    </ul>
+
+    <ul class="contact-menu">
+        <li class="contact"><a href="">Mon CV</a></li>
+        <li class="insta-button"><a href="https://www.instagram.com/scarantor/">Instagram</a></li>
+    </ul>
+    <script>
+        $(document).ready(function () {
+                var resizeMenu = function () {
+                    var windowWidth = $(this).width();
+
+                    // The width of stuff that needs to always be visible
+                    var fixedWidth = $('#menu li a').width() + $('.contact-menu').width();
+
+                    // Remaining width that the menu can occupy
+                    var availableWidth = windowWidth - fixedWidth;
+
+                    resizeMenuToWidth(availableWidth);
+                };
+
+                var resizeMenuToWidth = function (availableWidth) {
+                    var widthSoFar = 0;
+
+                    // Iterate through menu items
+                    $('#menu li').each(function () {
+                        var itemWidth = $(this).width();
+
+                        // If the menu width has already exceeded the available space,
+                        // or if this menu item will cause it to exceed the space
+                        if (widthSoFar > availableWidth || (widthSoFar + itemWidth > availableWidth)) {
+                            // Start hiding the menu items
+                            $(this).hide();
+                        } else {
+                            // Otherwise, show the menu item, and update the width count
+                            $(this).show();
+                            widthSoFar += itemWidth;
+                        }
+                    });
+                };
+
+                // Resize menu to when the page loads
+                resizeMenu();
+
+                // Also resize menu when the window is resized
+                $(window).resize(resizeMenu);
+            });
+    </script>
+
+    <div id="myContainer">
+
         <div class="section">
-            <div id="container">
-                <div id="container2">
-                    <div class="box one"></div>
-                    <div class="box two"></div>
-                    <div class="box three"></div>
-                    <div class="box four"></div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>Scroll Horizontally</h1>
+                    <p>Use `scrollHorizontally: true` and enable the mouse wheel horizontal scroll for slides.</p>
                 </div>
-                <script type="text/javascript">
-                    document.getElementById('container')
-                        .addEventListener('mousewheel', function (e) {
-                            this.scrollTop += e.deltaY;
-                        });
-                </script>
+            </div>
+            <div class="slide">
+                <h1>Slide 1.2</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 1.3</h1>
             </div>
         </div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
+        <div class="section">
+            <h1>Section 2</h1>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h1>Section 3</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 3.2</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 3.3</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 3.4</h1>
+            </div>
+        </div>
+        <div class="section">
+            <h1>Section 4</h1>
+        </div>
     </div>
-    <div class="section">
-        <div class="slide"> Slide 1 </div>
-        <div class="slide"> Slide 2 </div>
-        <div class="slide"> Slide 3 </div>
-        <div class="slide"> Slide 4 </div>
-    </div>
+
+    <input type="hidden" id="_4" value="3" />
+
+    <script type="text/javascript" src="../fullpage.scrollHorizontally.limited.min.js"></script>
+
+    <script type="text/javascript" src="../fullpage.extensions.min.js"></script>
+
     <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage', {
-            //Navigation
+        new fullpage('#myContainer', {
+            sectionsColor: ['brown', 'grey', 'pink', 'black', '#ccddff', '#ccc'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
             menu: '#menu',
-            lockAnchors: false,
-            anchors:['firstPage', 'secondPage'],
-            navigation: false,
-            navigationPosition: 'right',
-            navigationTooltips: ['firstSlide', 'secondSlide'],
-            showActiveTooltip: false,
-            slidesNavigation: false,
-            slidesNavPosition: 'bottom',
-
-            //Scrolling
-            css3: true,
-            scrollingSpeed: 700,
-            autoScrolling: true,
-            fitToSection: true,
-            fitToSectionDelay: 1000,
-            scrollBar: false,
-            easing: 'easeInOutCubic',
-            easingcss3: 'ease',
-            loopBottom: false,
-            loopTop: false,
-            loopHorizontal: true,
-            continuousVertical: false,
-            continuousHorizontal: false,
-            scrollHorizontally: false,
-            interlockedSlides: false,
-            dragAndMove: false,
-            offsetSections: false,
-            resetSliders: false,
-            fadingEffect: false,
-            normalScrollElements: '#element1, .element2',
-            scrollOverflow: false,
-            scrollOverflowReset: false,
-            scrollOverflowOptions: null,
-            touchSensitivity: 15,
-            bigSectionsDestination: null,
-
-            //Accessibility
-            keyboardScrolling: true,
-            animateAnchor: true,
-            recordHistory: true,
-
-            //Design
-            controlArrows: true,
-            verticalCentered: true,
-            sectionsColor : ['#ccc', '#fff'],
-            paddingTop: '3em',
-            paddingBottom: '10px',
-            fixedElements: '#header, .footer',
-            responsiveWidth: 0,
-            responsiveHeight: 0,
-            responsiveSlides: false,
-            parallax: false,
-            parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-            dropEffect: false,
-            dropEffectOptions: { speed: 2300, color: '#F82F4D', zIndex: 9999},
-            waterEffect: false,
-            waterEffectOptions: { animateContent: true, animateOnMouseMove: true},
-            cards: false,
-            cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
-
-            //Custom selectors
-            sectionSelector: '.section',
-            slideSelector: '.slide',
-
-            lazyLoading: true,
-
-            //events
-            onLeave: function(origin, destination, direction){},
-            afterLoad: function(origin, destination, direction){},
-            afterRender: function(){},
-            afterResize: function(width, height){},
-            afterReBuild: function(){},
-            afterResponsive: function(isResponsive){},
-            afterSlideLoad: function(section, origin, destination, direction){},
-            onSlideLeave: function(section, origin, destination, direction){}
+            slidesNavigation: true,
+            scrollHorizontally: true,
+            loopHorizontal: false,
+            afterSlideLoad: function (section, origin, destination, direction) {
+                console.log({
+                    section: section,
+                    origin: origin,
+                    destination: destination,
+                    direction: direction
+                });
+            },
+            onSlideLeave: function (section, origin, destination, direction) {
+                console.log({
+                    section: section,
+                    origin: origin,
+                    destination: destination,
+                    direction: direction
+                });
+            }
         });
     </script>
 </body>
+
 </html>
