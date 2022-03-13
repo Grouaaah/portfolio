@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 /* Reset CSS
  * --------------------------------------- */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+body,div,dl,dt,dd,ul,ol,li,h1,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
@@ -61,6 +61,23 @@ body{
 h1{
 	font-size: 6em;
 }
+@font-face {
+	font-family: "Airplanes"; src: url('assets/fonts/AirplanesInTheNightSky-82DZ.ttf');
+}
+h2{
+	font-family: "Airplanes";
+	font-size: 2em;
+}
+img {
+	max-width: 60%;
+	border: 1px solid black;
+}
+
+h3 {
+	font-family: "Airplanes";
+	font-size: 2.5em;
+}
+
 p{
 	font-size: 2em;
 }

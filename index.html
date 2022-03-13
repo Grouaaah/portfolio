@@ -14,16 +14,22 @@
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
     <script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.js"></script>
-    <title>La curiosité au cœur de la photographie</title>
+    <title>La curiosité au cœur de la photo</title>
 </head>
 
 <body>
 
     <ul id="menu">
-        <li data-menuanchor="firstPage"><a href="#firstPage">mystère</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">désir</a></li>
+        <li data-menuanchor="firstPage"><a href="#firstPage">découverte</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">émerveillement</a></li>
         <li data-menuanchor="3rdPage"><a href="#3rdPage">intérêt</a></li>
-        <li data-menuanchor="4thPage"><a href="#4thPage">passion</a></li>
+        <li data-menuanchor="4thPage"><a href="#4thPage">appétence</a></li>
+        <li data-menuanchor="5thPage"><a href="#5thPage">recherche</a></li>
+        <li data-menuanchor="6thPage"><a href="#6thPage">goût</a></li>
+        <li data-menuanchor="7thPage"><a href="#7thPage">soif</a></li>
+        <li data-menuanchor="8thPage"><a href="#8thPage">passion</a></li>
+        <li data-menuanchor="9thPage"><a href="#9thPage">désir</a></li>
+        <li data-menuanchor="10thPage"><a href="#10thPage">attention</a></li>
     </ul>
 
     <ul class="contact-menu">
@@ -34,27 +40,21 @@
         $(document).ready(function () {
                 var resizeMenu = function () {
                     var windowWidth = $(this).width();
-
-                    // The width of stuff that needs to always be visible
-                    var fixedWidth = $('#menu li a').width() + $('.contact-menu').width();
-
-                    // Remaining width that the menu can occupy
+                    // The width of stuff that needs to always be visible:
+                    var fixedWidth = $('#menu li a').width() + $('.contact-menu').width() + 200;
+                    // Remaining width that the menu can occupy:
                     var availableWidth = windowWidth - fixedWidth;
-
                     resizeMenuToWidth(availableWidth);
                 };
-
                 var resizeMenuToWidth = function (availableWidth) {
-                    var widthSoFar = 100;
-
-                    // Iterate through menu items
+                    var widthSoFar = 0;
+                    // Iterate through menu items:
                     $('#menu li').each(function () {
                         var itemWidth = $(this).width();
-
                         // If the menu width has already exceeded the available space,
                         // or if this menu item will cause it to exceed the space
                         if (widthSoFar > availableWidth || (widthSoFar + itemWidth > availableWidth)) {
-                            // Start hiding the menu items
+                            // Start hiding the menu items:
                             $(this).hide();
                         } else {
                             // Otherwise, show the menu item, and update the width count
@@ -63,10 +63,8 @@
                         }
                     });
                 };
-
                 // Resize menu to when the page loads
                 resizeMenu();
-
                 // Also resize menu when the window is resized
                 $(window).resize(resizeMenu);
             });
@@ -77,36 +75,178 @@
         <div class="section">
             <div class="slide">
                 <div class="intro">
-                    <h1>Scroll Horizontally</h1>
-                    <p>Use `scrollHorizontally: true` and enable the mouse wheel horizontal scroll for slides.</p>
+                    <h1>La curiosité au cœur de la photographie</h1>
+                    <p>Pour une meilleure expérience, mettez-vous en plein écran (F11) et utilisez les flèches du clavier</p>
+                    <h6><br /><br />Toutes les photographies sont ©Antoine Coliac</h6>
                 </div>
             </div>
             <div class="slide">
-                <h1>Slide 1.2</h1>
+                <h2>Moment unique, inattendu, mystérieux…<br />
+                    <img alt="" src="assets/images/IMG_0015.JPG"></h2>
             </div>
             <div class="slide">
-                <h1>Slide 1.3</h1>
+                <h3>Savoir se retirer en soi, quel voyage !<br />
+                </h3>
+            </div>
+            <div class="slide">
+                <h2>Où trouves-tu la paix, créature sans âge ?<br />
+                    <img alt="" src="assets/images/IMG_9695.JPG">
+                </h2>
             </div>
         </div>
         <div class="section">
-            <h1>Section 2</h1>
+            <div class="slide">
+                <h3>Porterais-tu la terre dans ta sérénité ?</h3>
+            </div>
+            <div class="slide">
+                <h2>L'art et la force dans ta persévérance ?<br />
+                    <img alt="" src="assets/images/IMG_0406.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>La quiétude de ta discrète noblesse<br />
+                    <img alt="" src="assets/images/IMG_9834.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Éclaire, pas à pas, un chemin de Vie précieux<br />
+                    <img alt="" src="assets/images/IMG_0043.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Tout imprégné d'une impalpable vérité…<br />
+                    <img alt="" src="assets/images/IMG_0486.JPG">
+                </h2>
+            </div>
         </div>
         <div class="section">
             <div class="slide">
-                <h1>Section 3</h1>
+            <h2>Écharpes de nues reliant ciel et terre<br />
+                <img src="assets/images/IMG_0080.JPG">
+            </h2>
             </div>
             <div class="slide">
-                <h1>Slide 3.2</h1>
+                <h2>Imaginaire et surréel<br />
+                    <img alt="" src="assets/images/IMG_0014.JPG">
+                </h2>
             </div>
             <div class="slide">
-                <h1>Slide 3.3</h1>
+                <h2>Un souffle, en suspens, éternel<br />
+                    <img alt="" src="assets/images/IMG_0083.JPG">
+                </h2>
             </div>
             <div class="slide">
-                <h1>Slide 3.4</h1>
+                <h2>Dans l'espace et le temps, tissé, est mystère<br />
+                    <img alt="" src="assets/images/IMG_0129.JPG">
+                </h2>
             </div>
         </div>
         <div class="section">
-            <h1>Section 4</h1>
+            <div class="slide">
+                <h2>À travers mille couleurs<br />
+                    <img alt="" src="assets/images/IMG_9529.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h3>J'erre.</h3>
+            </div>
+            <div class="slide">
+                <h2>Frôlant le sol<br />
+                    <img alt="" src="assets/images/IMG_0339.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Le regard vagabond<br />
+                    <img alt="" src="assets/images/IMG_9832.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h3>Mes pas sont Liberté.<h3/>
+            </div>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h2>Le soleil est ma source<br />
+                    <img alt="" src="assets/images/IMG_9371.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>L'arbre de la vie se dessine.<br />
+                    <img alt="" src="assets/images/IMG_0325.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h3>Il trace mon chemin<br /></h3>
+            </div>
+            <div class="slide">
+                <h2>Je vis.<br />
+                    <img alt="" src="assets/images/IMG_0108.JPG">
+                </h2>
+            </div>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h2>Instant de magie printanière<br />
+                    <img alt="" src="assets/images/IMG_0089.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Exhalant son hymne d'amour<br />
+                    <img alt="" src="assets/images/IMG_9525.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Émoi secret de l'éphémère<br />
+                    <img alt="" src="assets/images/IMG_9091.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Beauté et merveille d'un jour<br />
+                    <img alt="" src="assets/images/IMG_9529.JPG">
+                </h2>
+            </div>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h2>Envoûtant le silence de sa sérénité<br />
+                    <img alt="" src="assets/images/IMG_0144.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>L'âme d'un sous-bois bercée de plénitude<br />
+                    <img alt="" src="assets/images/IMG_0471.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Révèle, infinie, la voix de la Nature<br />
+                    <img alt="" src="assets/images/IMG_0219.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Aux pierres coiffées de dentelles de verdure<br />
+                    <img alt="" src="assets/images/IMG_0055.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Les percées de lumière offrent leur quiétude<br />
+                    <img alt="" src="assets/images/IMG_9283.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Immense enchantement en son intimité<br />
+                    <img alt="" src="assets/images/IMG_9549.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Mystérieuse grandeur<br />
+                    <img alt="" src="assets/images/IMG_0151.JPG">
+                </h2>
+            </div>
+            <div class="slide">
+                <h2>Inidicible bonheur<br />
+                    <img alt="" src="assets/images/IMG_0299.JPG">
+                </h2>
+            </div>
         </div>
     </div>
 
@@ -118,46 +258,22 @@
 
     <script type="text/javascript">
         new fullpage('#myContainer', {
-            sectionsColor: ['brown', 'grey', 'pink', 'black', '#ccddff', '#ccc'],
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+            sectionsColor: ['#DEB887', 'pink', 'grey', 'orange', '#ccddff', '#CD5C5C', 'red', 'blue', 'lightsalmon', 'lightpink'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage', '10thPage'],
             menu: '#menu',
             slidesNavigation: true,
-            scrollHorizontally: true,
-            loopHorizontal: false,
-            //Scrolling
-            css3: true,
-            scrollingSpeed: 700,
-            autoScrolling: true,
-            fitToSection: true,
-            fitToSectionDelay: 1000,
-            scrollBar: false,
-            easing: 'easeInOutCubic',
-            easingcss3: 'ease',
-            loopBottom: false,
-            loopTop: false,
-            continuousVertical: false,
-            continuousHorizontal: false,
-            interlockedSlides: false,
-            dragAndMove: false,
-            offsetSections: false,
-            resetSliders: false,
-            fadingEffect: false,
+            scrollHorizontally: false,
             normalScrollElements: '#element1, .element2',
             scrollOverflow: false,
             scrollOverflowReset: false,
             scrollOverflowOptions: null,
             touchSensitivity: 15,
-            bigSectionsDestination: null,
-            //Accessibility
             keyboardScrolling: true,
             animateAnchor: true,
-            recordHistory: true,
-            //Design
             controlArrows: true,
             verticalCentered: true,
             paddingTop: '3em',
             paddingBottom: '10px',
-            fixedElements: '#header, .footer',
             responsiveWidth: 0,
             responsiveHeight: 0,
             responsiveSlides: false,
@@ -169,10 +285,10 @@
             waterEffectOptions: { animateContent: true, animateOnMouseMove: true },
             cards: false,
             cardsOptions: { perspective: 100, fadeContent: true, fadeBackground: true },
-            //Custom selectors
             sectionSelector: '.section',
             slideSelector: '.slide',
             lazyLoading: true,
+            loopHorizontal: false,
             afterSlideLoad: function (section, origin, destination, direction) {
                 console.log({
                     section: section,
