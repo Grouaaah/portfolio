@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -15,198 +15,133 @@
     <script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <title>La curiosité au cœur de la photo</title>
+    <title>Antoine Coliac - portfolio</title>
 </head>
 
 <body>
-
     <ul id="menu">
-        <li data-menuanchor="firstPage"><a href="#firstPage">découverte</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">émerveillement</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">rêve</a></li>
-        <li data-menuanchor="4thPage"><a href="#4thPage">éblouissement</a></li>
-        <li data-menuanchor="5thPage"><a href="#5thPage">révélation</a></li>
-        <li data-menuanchor="6thPage"><a href="#6thPage">passion</a></li>
-        <li data-menuanchor="7thPage"><a href="#7thPage">renouveau</a></li>
+        <li data-menuanchor="firstPage"><a href="#parcours">Mon parcours</a></li>
+        <li data-menuanchor="secondPage"><a href="#expérience">Mon expérience</a></li>
+        <li data-menuanchor="3rdPage"><a href="#projets">Mes projets</a></li>
+        <li data-menuanchor="5thPage"><a href="#passions">Mes passions</a></li>
     </ul>
 
     <ul class="contact-menu">
         <li class="contact"><a href="https://fr.linkedin.com/in/antoine-coliac">LinkedIn</a></li>
         <li class="insta-button"><a href="https://www.instagram.com/scarantor/">Instagram</a></li>
     </ul>
+
+    <!-- This script makes the top buttons responsive! -->
     <script>
         $(document).ready(function () {
-                var resizeMenu = function () {
-                    var windowWidth = $(this).width();
-                    // The width of stuff that needs to always be visible:
-                    var fixedWidth = $('#menu li a').width() + $('.contact-menu').width() + 200;
-                    // Remaining width that the menu can occupy:
-                    var availableWidth = windowWidth - fixedWidth;
-                    resizeMenuToWidth(availableWidth);
-                };
-                var resizeMenuToWidth = function (availableWidth) {
-                    var widthSoFar = 0;
-                    // Iterate through menu items:
-                    $('#menu li').each(function () {
-                        var itemWidth = $(this).width();
-                        // If the menu width has already exceeded the available space,
-                        // or if this menu item will cause it to exceed the space
-                        if (widthSoFar > availableWidth || (widthSoFar + itemWidth > availableWidth)) {
-                            // Start hiding the menu items:
-                            $(this).hide();
-                        } else {
-                            // Otherwise, show the menu item, and update the width count
-                            $(this).show();
-                            widthSoFar += itemWidth;
-                        }
-                    });
-                };
-                // Resize menu to when the page loads
-                resizeMenu();
-                // Also resize menu when the window is resized
-                $(window).resize(resizeMenu);
-            });
+            var resizeMenu = function () {
+                var windowWidth = $(this).width();
+                // The width of stuff that needs to always be visible:
+                var fixedWidth = $('#menu li a').width() + $('.contact-menu').width() + 200;
+                // Remaining width that the menu can occupy:
+                var availableWidth = windowWidth - fixedWidth;
+                resizeMenuToWidth(availableWidth);
+            };
+            var resizeMenuToWidth = function (availableWidth) {
+                var widthSoFar = 0;
+                // Iterate through menu items:
+                $('#menu li').each(function () {
+                    var itemWidth = $(this).width();
+                    /* If the menu width has already exceeded the available space,
+                    or if this menu item will cause it to exceed the space */
+                    if (widthSoFar > availableWidth || (widthSoFar + itemWidth > availableWidth)) {
+                        // Start hiding the menu items:
+                        $(this).hide();
+                    } else {
+                        // Otherwise, show the menu item, and update the width count
+                        $(this).show();
+                        widthSoFar += itemWidth;
+                    }
+                });
+            };
+            // Resize menu to when the page loads
+            resizeMenu();
+            // Also resize menu when the window is resized
+            $(window).resize(resizeMenu);
+        });
     </script>
 
     <div id="myContainer">
-
-        <div class="section">
+        <div class="section" id="intro1">
             <div class="slide">
                 <div class="intro">
-                    <h1>La curiosité au cœur de la photographie</h1>
-                    <p>Pour une meilleure expérience, mettez-vous en plein écran (F11) et utilisez les flèches du clavier</p>
-                    <h6><br /><br />Toutes les photographies sont ©Antoine Coliac</h6>
+                    <h1>Il était une fois…</h1>
+                    <p>Un jeune garçon curieux et éveillé, ne tenant pas en place, passionné de nature et d'entomologie
+                        dont le seul désir
+                        était d'explorer sans relâche le monde qui l'entoure et trouver des moyens de l'enrichir
+                        davantage.<br /></p>
+                    <h6>Utilisez les flèches du clavier pour continuer…</h6>
                 </div>
             </div>
             <div class="slide">
-                <h2>Moment unique, inattendu, mystérieux…<br />
-                    <img alt="" src="assets/images/IMG_0015.JPG"></h2>
+                <p>Un beau jour,
+                    entre deux escapades au jardin, il décida d'aller faire un tour dans le bureau où trônait le PC
+                    familial, bien en
+                    évidence.<br />
+                    Il commença à naviguer entre les menus, appuyer sur les touches et surfer sur le web. Petit à petit,
+                    il découvrit
+                    Windows et prit plaisir à explorer chaque fonctionnalité dans ses moindre recoins.</p>
             </div>
             <div class="slide">
-                <h3>Savoir se retirer en soi, quel voyage !<br />
-                </h3>
+                <p>Il ne le savait pas encore, mais ce nouvel outil allait devenir son exutoire, et se placer au cœur de
+                    son futur projet professionnel : devenir développeur.
+                    <br />Ce garçon, c'est moi. Antoine.<br />
+                    Mais je n'ai pas toujours su que l'informatique était ma vocation.
+                </p>
             </div>
             <div class="slide">
-                <h2>Où trouves-tu la paix, créature sans âge ?<br />
-                    <img alt="" src="assets/images/IMG_9695.JPG">
-                </h2>
-            </div>
-        </div>
-        <div class="section">
-            <div class="slide">
-                <h3>Porterais-tu la terre dans ta sérénité ?</h3>
-            </div>
-            <div class="slide">
-                <h2>L'art et la force dans ta persévérance ?<br />
-                    <img alt="" src="assets/images/IMG_0406.JPG">
-                </h2>
+                <p>En 2017, après obtention de mon bac S, j'ai longuement hésité avant de prendre une décision quant à
+                    mon orientation. J'aimais les sciences, mais je n'étais pas à l'aise avec les méthodes
+                    d'enseignement des écoles préparatoires ; j'aimais la littérature, mais je ne lisais pas assez.
+                    Un jour il fallut prendre une décision.<br />
+                    En comparant mes notes dans toutes les matières, je me suis dit qu'il n'y avait qu'un choix possible
+                    pour moi : les langues. J'ai donc entamé une licence de langues étrangères appliquées sur 3 ans,
+                    puis j'ai compris que cette formation n'était pas faite pour moi.
             </div>
             <div class="slide">
-                <h2>La quiétude de ta discrète noblesse<br />
-                    <img alt="" src="assets/images/IMG_9834.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Éclaire, pas à pas, un chemin de Vie précieux<br />
-                    <img alt="" src="assets/images/IMG_0043.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Tout imprégné d'une impalpable vérité…<br />
-                    <img alt="" src="assets/images/IMG_0486.JPG">
-                </h2>
+                <p>Je passais toujours beaucoup de temps devant l'ordinateur. J'aime créer, innover, découvrir. À vrai
+                    dire, la technologie me fascinait. Je me suis alors lancé dans le
+                    développement informatique et j'ai intégré l'Institut G4 en 2020 pour mener à bien ce projet de vie.
+                </p>
             </div>
         </div>
         <div class="section">
             <div class="slide">
-            <h2>Écharpes de nues reliant ciel et terre<br />
-                <img alt="" src="assets/images/IMG_0080.JPG">
-            </h2>
+                <h1>Mon expérience</h1>
+                <h3>Commençons par le commencement.</h3>
             </div>
             <div class="slide">
-                <h2>Imaginaire et surréel<br />
-                    <img alt="" src="assets/images/IMG_0014.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Un souffle, en suspens, éternel<br />
-                    <img alt="" src="assets/images/IMG_0083.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Dans l'espace et le temps, tissé, est mystère<br />
-                    <img alt="" src="assets/images/IMG_0129.JPG">
-                </h2>
+                <img alt="" src="assets/images/IMG_0144.JPG">
             </div>
         </div>
         <div class="section">
             <div class="slide">
-                <h2>À travers mille couleurs<br />
-                    <img alt="" src="assets/images/IMG_9529.JPG">
-                </h2>
+                <h1></h1>
             </div>
             <div class="slide">
-                <h3>J'erre.</h3>
+                <h1></h1>
             </div>
             <div class="slide">
-                <h2>Frôlant le sol<br />
-                    <img alt="" src="assets/images/IMG_0339.JPG">
-                </h2>
+                <h1></h1>
             </div>
             <div class="slide">
-                <h2>Le regard vagabond<br />
-                    <img alt="" src="assets/images/IMG_9832.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h3>Mes pas sont Liberté.<h3/>
+                <h1></h1>
             </div>
         </div>
         <div class="section">
             <div class="slide">
-                <h2>Le soleil est ma source<br />
-                    <img alt="" src="assets/images/IMG_9371.JPG">
-                </h2>
+                <h1>La photographie et la poésie</h1>
+                <h2>« C’est directement, et parfois profondément,
+                    que l’activité du photographe influe
+                    sur ce que la poésie cherche à être. »<br /></h2>
             </div>
             <div class="slide">
-                <h2>L'arbre de la vie se dessine.<br />
-                    <img alt="" src="assets/images/IMG_0325.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h3>Il trace mon chemin<br /></h3>
-            </div>
-            <div class="slide">
-                <h2>Je vis.<br />
-                    <img alt="" src="assets/images/IMG_0108.JPG">
-                </h2>
-            </div>
-        </div>
-        <div class="section">
-            <div class="slide">
-                <h2>Instant de magie printanière<br />
-                    <img alt="" src="assets/images/IMG_0089.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Exhalant son hymne d'amour<br />
-                    <img alt="" src="assets/images/IMG_9525.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Émoi secret de l'éphémère<br />
-                    <img alt="" src="assets/images/IMG_9091.JPG">
-                </h2>
-            </div>
-            <div class="slide">
-                <h2>Beauté et merveille d'un jour<br />
-                    <img alt="" src="assets/images/IMG_9529.JPG">
-                </h2>
-            </div>
-        </div>
-        <div class="section">
-            <div class="slide">
-                <h2>Envoûtant le silence de sa sérénité<br />
+                <h2>Envoûtant, le silence de sa sérénité !<br />
                     <img alt="" src="assets/images/IMG_0144.JPG">
                 </h2>
             </div>
@@ -221,8 +156,8 @@
                 </h2>
             </div>
             <div class="slide">
-                <h2>Aux pierres coiffées de dentelles de verdure<br />
-                    <img alt="" src="assets/images/IMG_0055.JPG">
+                <h2>Aux puissantes, mais délicates créatures…<br />
+                    <img alt="" src="assets/images/IMG_0108.JPG">
                 </h2>
             </div>
             <div class="slide">
@@ -241,7 +176,7 @@
                 </h2>
             </div>
             <div class="slide">
-                <h2>Inidicible bonheur<br />
+                <h2>Inidicible bonheur.<br />
                     <img alt="" src="assets/images/IMG_0299.JPG">
                 </h2>
             </div>
@@ -256,37 +191,13 @@
 
     <script type="text/javascript">
         new fullpage('#myContainer', {
-            sectionsColor: ['#DEB887', 'pink', 'grey', 'orange', '#ccddff', '#CD5C5C', '#8FBC8F'],
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage', '10thPage'],
+            sectionsColor: ['#deb887', '#cd5c5c', '#8fbc8f', 'orange'],
+            anchors: ['parcours', 'expérience', 'projets', 'passions'],
             menu: '#menu',
             slidesNavigation: true,
-            scrollHorizontally: false,
-            normalScrollElements: '#element1, .element2',
-            scrollOverflow: false,
-            scrollOverflowReset: false,
-            scrollOverflowOptions: null,
-            touchSensitivity: 15,
-            keyboardScrolling: true,
-            animateAnchor: true,
-            controlArrows: true,
-            verticalCentered: true,
-            paddingTop: '3em',
-            paddingBottom: '10px',
-            responsiveWidth: 0,
-            responsiveHeight: 0,
-            responsiveSlides: false,
-            parallax: true,
-            parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
-            dropEffect: false,
-            dropEffectOptions: { speed: 2300, color: '#F82F4D', zIndex: 9999 },
-            waterEffect: false,
-            waterEffectOptions: { animateContent: true, animateOnMouseMove: true },
-            cards: false,
-            cardsOptions: { perspective: 100, fadeContent: true, fadeBackground: true },
-            sectionSelector: '.section',
-            slideSelector: '.slide',
-            lazyLoading: true,
             loopHorizontal: false,
+            scrollHorizontally: true,
+            scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
             afterSlideLoad: function (section, origin, destination, direction) {
                 console.log({
                     section: section,
@@ -305,6 +216,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

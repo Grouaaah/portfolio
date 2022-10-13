@@ -1,201 +1,290 @@
 @CHARSET "ISO-8859-1";
+
 /* Reset CSS
  * --------------------------------------- */
-body,div,dl,dt,dd,ul,ol,li,h1,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
-    padding: 0;
-    margin: 0;
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	padding: 0;
+	margin: 0;
 }
-a{
-	text-decoration:none;
+
+a {
+	text-decoration: none;
 }
+
 table {
-    border-spacing: 0;
+	border-spacing: 0;
 }
-fieldset,img {
-    border: 0;
+
+fieldset,
+img {
+	border: 0;
 }
-address,caption,cite,code,dfn,em,strong,th,var {
-    font-weight: normal;
-    font-style: normal;
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-weight: normal;
+	font-style: normal;
 }
-strong{
+
+strong {
 	font-weight: bold;
 }
-ol,ul {
-    list-style: none;
-    margin:0;
-    padding:0;
+
+ol,
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-caption,th {
-    text-align: left;
+
+caption,
+th {
+	text-align: left;
 
 }
-h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
-    font-size: 100%;
-    margin:0;
-    padding:0;
-    color:#444;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: 100%;
+	margin: 0;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
-q:before,q:after {
-    content:'';
+
+q:before,
+q:after {
+	content: '';
 }
-abbr,acronym { border: 0;
+
+abbr,
+acronym {
+	border: 0;
 }
 
 
 /* Custom CSS
  * --------------------------------------- */
-body{
-	font-family: arial,helvetica;
+body {
+	font-family: arial, helvetica;
 	color: #333;
-	color: rgba(0,0,0,0.5);
+	color: rgba(0, 0, 0, 0.5);
 }
-.wrap{
+
+.wrap {
 	margin-left: auto;
 	margin-right: auto;
 	width: 960px;
 	position: relative;
 }
-h1{
-	font-size: 6em;
-}
+
 @font-face {
-	font-family: "Airplanes"; src: url('assets/fonts/AirplanesInTheNightSky-82DZ.ttf');
-}
-h2{
 	font-family: "Airplanes";
-	font-size: 2em;
+	src: url('assets/fonts/AirplanesInTheNightSky-82DZ.ttf');
 }
+
+h2 {
+	font-family: "Airplanes";
+	font-size: 1.5em;
+}
+
 img {
 	max-width: 60%;
 	border: 1px solid black;
 }
 
-h3 {
-	font-family: "Airplanes";
-	font-size: 2.5em;
+h1 {
+	font-size: 4em;
+	margin: 0;
 }
 
-p{
-	font-size: 2em;
+
+h3 {
+	font-size: 1.5em;
+	color: #fff;
+	margin: 0;
 }
-.intro p{
-	width: 50%;
+
+h6 {
+	margin-top: 1em;
+	text-align: end;
+	font-size: 1.2em;
+}
+
+p {
+	width: 75%;
+	margin: 0 auto;
+	font-size: 1.5em;
+	text-align: justify;
+}
+
+.intro p {
+	width: 75%;
 	margin: 0 auto;
 	font-size: 1.5em;
 }
-.section{
-	text-align:center;
+
+.section {
+	text-align: center;
 }
+
+#intro1 {
+	background-image: url(assets/images/parchemin.jpg);
+	font-family: "Airplanes";
+}
+
 #menu li {
-	display:inline-block;
+	display: inline-block;
 	margin: 10px;
 	color: #000;
-	background:#fff;
-	background: rgba(255,255,255, 0.5);
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
 	-webkit-border-radius: 10px;
-            border-radius: 10px;
+	border-radius: 10px;
 }
-#menu li.active{
-	background:#666;
-	background: rgba(0,0,0, 0.5);
+
+#menu li.active {
+	background: #666;
+	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
 }
-#menu li a{
-	text-decoration:none;
+
+#menu li a {
+	text-decoration: none;
 	color: #000;
 }
-#menu li.active a:hover{
+
+#menu li.active a:hover {
 	color: #000;
 }
-#menu li:hover{
-	background: rgba(255,255,255, 0.8);
+
+#menu li:hover {
+	background: rgba(255, 255, 255, 0.8);
 }
+
 #menu li a,
-#menu li.active a{
+#menu li.active a {
 	padding: 9px 18px;
-	display:block;
+	display: block;
 }
-#menu li.active a{
+
+#menu li.active a {
 	color: #fff;
 }
-#menu{
-	position:fixed;
-	top:0;
-	left:0;
+
+#menu {
+	position: fixed;
+	top: 0;
+	left: 0;
 	height: 40px;
 	z-index: 70;
 	width: 100%;
 	padding: 0;
-	margin:0;
+	margin: 0;
 }
 
 
 /* Buttons */
 .button {
-    margin: 20px 0 0 0;
-    vertical-align: middle;
-    display: inline-block
+	margin: 20px 0 0 0;
+	vertical-align: middle;
+	display: inline-block
 }
 
 .button a {
-    color: #fff;
-    background: rgba(0,0,0,0.4);
-    padding: 15px 30px;
-    border-radius: 5px;
-    display: inline-block;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 15px 30px;
+	border-radius: 5px;
+	display: inline-block;
 }
 
 .button a:hover {
-    color: #316f68;
-    background-color: #fff
+	color: #316f68;
+	background-color: #fff
 }
 
 
 /* Extensions preview menu
  * --------------------------------------- */
-.contact-menu{
+.contact-menu {
 	position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99;
-    border-top: 0;
-    box-shadow: 1px 0px 3px rgba(0,0,0,0.8);
+	top: 0;
+	right: 0;
+	z-index: 99;
+	border-top: 0;
+	box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.8);
 }
-.contact-menu li{
+
+.contact-menu li {
 	display: inline-block;
 	margin: 0;
 }
-.contact-menu li a{
+
+.contact-menu li a {
 	padding: 15px 25px;
 	display: block;
 }
 
-.contact{
-}
-.contact a{
+.contact a {
 	color: white;
 }
 
-.insta-button{
+.contact a:hover {
+	background-color: #0e76a8;
 }
-.insta-button a{
+
+.insta-button a {
 	color: white;
 }
-.insta-button:hover{
-	background-color: #88B04B;
+
+.insta-button a:hover {
 	font-size: 1.5em;
 	text-decoration: none;
-	padding: 5px 20px;
 	border-radius: 4px;
 	transition: all 0.2s ease-in-out;
 	transform: scale(1.1);
+	background: #f09433;
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+	background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+	background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
-.code{
-	background: rgba(255,255,255,0.7);
+.code {
+	background: rgba(255, 255, 255, 0.7);
 	padding: 0px 5px;
 	line-height: 25px;
 }
@@ -203,20 +292,14 @@ p{
 
 /* Style for our header texts
 * --------------------------------------- */
-h1{
-	font-size: 5em;
-	font-family: arial,helvetica;
-	color: #fff;
-	margin:0;
-}
 .section p,
-.intro p{
-	color: #fff;
+.intro p {
+	color: black;
 }
 
 
 /* Centered texts in each section
 * --------------------------------------- */
-.section{
-	text-align:center;
+.section {
+	text-align: center;
 }
